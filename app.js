@@ -36,7 +36,7 @@ initializeDbAndServer()
 //}
 app.get('/players/', async (request, response) => {
   const sqlquery = `SELECT player_id AS playerid,player_name AS playerName FROM player_details;`
-  const qwe = await db.all(sqlquery)
+  const qwe = await database.all(sqlquery)
   response.send(qwe)
 })
 module.exports = app
